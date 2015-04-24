@@ -1,8 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These functions take a matrix and store in function scope and then cache the
+##  the inverse of the matrix.
 
-## Write a short comment describing this function
-
+## makeCacheMatrix takes a matrix and returns a function list 
+##  Functionlist contains set, get to set and get the input matrix
+##  and setInvertedMatrix and getInvertedMatrix to get / set the inversion of the 
+##  input matrix within the scope of the function.
 makeCacheMatrix <- function(storedMatrix = matrix()) {
   storedInvertedMatrix <- NULL
   set <- function(newVector) {
@@ -18,7 +20,8 @@ makeCacheMatrix <- function(storedMatrix = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve takes the funcList from makeCacheMatrix and either returns the cached
+## data or it calculates the intertedMatrix and stores and returns it.
 
 cacheSolve <- function(funcList, ...) {
   storedInvertedMatrix <- funcList$getInvertedMatrix()
