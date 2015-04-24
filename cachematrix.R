@@ -20,8 +20,8 @@ makeCacheMatrix <- function(storedMatrix = matrix()) {
 }
 
 
-## cacheSolve takes the funcList from makeCacheMatrix and either returns the cached
-## data or it calculates the intertedMatrix and stores and returns it.
+## cacheSolve takes the funcList from makeCacheMatrix and either returns the 
+## cached data or it calculates the invertedMatrix, stores and then returns it.
 
 cacheSolve <- function(funcList, ...) {
   storedInvertedMatrix <- funcList$getInvertedMatrix()
